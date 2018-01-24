@@ -27,7 +27,7 @@ ifeq ($(UNAME_S), Darwin) #APPLE
 	CFLAGS += -D__APPLE__   -L../3rdparty/lib  -Wl,-all_load ../3rdparty/lib/libalut.a -Wl,-noall_load -I../3rdparty/include -framework OpenAL
 #	CXXFLAGS += -D__APPLE__
 endif
-ifeq ($(UNAME_S), MINGW32_NT-6.1)
+ifeq (NT, $(findstring NT,$(UNAME_S)))
    ECHO_MESSAGE = "Windows"
 	LIBS +=  -lopenal
 	CXXFLAGS += 

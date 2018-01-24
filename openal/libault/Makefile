@@ -13,6 +13,7 @@ OS_NAME := $(shell echo $(UNAME_S) | tr '[A-Z]' '[a-z]')
 
 ifeq (NT, $(findstring NT,$(UNAME_S)))
    TARGET = libalut.dll
+   OS_NAME = windows
 endif
 
 all: $(TARGET)
@@ -27,6 +28,7 @@ ifeq (NT, $(findstring NT,$(UNAME_S)))
 	cp libalut/libopenal-1.dll ../libopenal-1.dll
 	cp libalut/libgcc_s_dw2-1.dll ../libgcc_s_dw2-1.dll
 	cp libalut/libwinpthread-1.dll ../libwinpthread-1.dll
+	@echo this version only support windows-32bit
 else
 	@echo you should install libalut-dev libopenal-dev first!!!
 endif
