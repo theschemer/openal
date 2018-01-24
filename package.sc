@@ -7,6 +7,6 @@
 ("private" . #t)
 ("scripts" 
     ("run" . "scheme32 --script")
-    ("build" . "cd openal && cd libault && make && make clean"))
+    ("build" . "cd libault && make && make clean"))
 ("dependencies")
 ("devDependencies"))
